@@ -1,0 +1,53 @@
+# Xcode
+*.xcworkspace
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Build products
+build/
+DerivedData/
+*.app
+*.ipa
+*.dSYM
+*.o
+*.a
+*.hmap
+
+# User-specific files
+*.xcuserdatad
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/*.xcuserdatad/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# Others
+*.swp
+*.DS_Store
+*.tmp
+*.lock
+*.log
+
+# Documentation
+*.docset
+*.doc
+*.html
+
+# Test Coverage
+*.xccoverage
+*.xcresult
+
