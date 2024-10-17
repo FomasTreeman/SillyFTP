@@ -1,45 +1,47 @@
-//
-//  SidebarView.swift
-//  SillyFTP
-//
-//  Created by Work on 09/10/2024.
-//
-
 import SwiftUI
 
 struct SidebarView: View {
-    @State private var servers: [ServerConfiguration] = MockData.serverConfigurations
-    @Binding var selectedServer: ServerConfiguration?
+    @ObservedObject var serverStore = ServerStore.shared
+    @State var editingServer: ServerConfiguration?
+    @State private var showAddServerSheet: Bool = false
     
     var body: some View {
-        List(selection: $selectedServer) {
-            ForEach(servers) { server in
-                ServerRow(server: server)
+        Text("🌐  Servers")
+            .bold()
+            .font(.headline)
+            .padding(.horizontal)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        Divider()
+            .padding(.horizontal)
+        List(serverStore.servers, id: \.id) { server in
+                ServerRow(server: server, editServer: $showAddServerSheet, editingServer: $editingServer)
                     .tag(server)
+                    .onTapGesture {
+                        serverStore.toggleServerSelection(server)
+                    }
+                    .background(server.id == serverStore.selectedServer?.id ? Color.blue : Color.clear)
+                    .clipShape(Capsule(style: .circular))
+                    .shadow(radius: 5)
             }
-            .onDelete(perform: deleteServer)
-        }
-        .listStyle(SidebarListStyle())
-        .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Button(action: addServer) {
-                    Label("Add Server", systemImage: "plus")
+            //            .onDelete(perform: deleteServer)
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button(action: {
+                        showAddServerSheet = true // Set the state variable to true to show the sheet
+                    }) {
+                        Label("Add Server", systemImage: "plus")
+                    }
                 }
             }
-        }
+            .sheet(isPresented: $showAddServerSheet) { // Present the sheet when the variable is true
+                ServerConfigurationView(show: $showAddServerSheet, editingServer: $editingServer)
+            }
+            .listStyle(SidebarListStyle())
     }
-    
+
     private func deleteServer(at offsets: IndexSet) {
-        servers.remove(atOffsets: offsets)
-        if let selectedServer = selectedServer,
-           !servers.contains(where: { $0.id == selectedServer.id }) {
-            self.selectedServer = nil
+            offsets.map { serverStore.servers[$0] }.forEach { server in
+                serverStore.removeServer(server) // Call the removeServer method
+            }
         }
-    }
-    
-    private func addServer() {
-        // Placeholder for adding a new server
-        let newServer = ServerConfiguration(id: UUID(), name: "New Server", host: "example.com", port: 21, username: "user", password: "pass", isSSH: false)
-        servers.append(newServer)
-    }
 }

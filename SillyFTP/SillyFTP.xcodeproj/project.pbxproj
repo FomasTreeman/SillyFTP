@@ -8,22 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E27E19A22CB5D29700C899AE /* SillyFTPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19A12CB5D29700C899AE /* SillyFTPApp.swift */; };
-		E27E19A42CB5D29700C899AE /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19A32CB5D29700C899AE /* FileView.swift */; };
 		E27E19A62CB5D29800C899AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27E19A52CB5D29800C899AE /* Assets.xcassets */; };
 		E27E19A92CB5D29800C899AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27E19A82CB5D29800C899AE /* Preview Assets.xcassets */; };
-		E27E19B42CB5D29900C899AE /* SillyFTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19B32CB5D29900C899AE /* SillyFTPTests.swift */; };
-		E27E19BE2CB5D29900C899AE /* SillyFTPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19BD2CB5D29900C899AE /* SillyFTPUITests.swift */; };
-		E27E19C02CB5D29900C899AE /* SillyFTPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19BF2CB5D29900C899AE /* SillyFTPUITestsLaunchTests.swift */; };
-		E27E19CD2CB5D43600C899AE /* FileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19CC2CB5D42F00C899AE /* FileModel.swift */; };
-		E27E19CF2CB5F2DB00C899AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19CE2CB5F2D400C899AE /* ContentView.swift */; };
 		E27E19D22CB5F30800C899AE /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19D12CB5F2FF00C899AE /* SidebarView.swift */; };
-		E27E19D42CB5F32900C899AE /* ServerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19D32CB5F32400C899AE /* ServerConfiguration.swift */; };
-		E27E19D62CB5F34200C899AE /* FileItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19D52CB5F33F00C899AE /* FileItem.swift */; };
 		E27E19D82CB5F35A00C899AE /* ServerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19D72CB5F35500C899AE /* ServerRow.swift */; };
 		E27E19DA2CB5F36700C899AE /* FileRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19D92CB5F36400C899AE /* FileRow.swift */; };
 		E27E19DC2CB5F37F00C899AE /* ServerConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19DB2CB5F37500C899AE /* ServerConfigurationView.swift */; };
 		E27E19DE2CB5F47700C899AE /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19DD2CB5F47200C899AE /* MainContentView.swift */; };
 		E27E19E12CB5F5CB00C899AE /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19E02CB5F5C900C899AE /* MockData.swift */; };
+		E27E19E62CB88BF400C899AE /* ServerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E19E52CB88BE600C899AE /* ServerStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,25 +39,18 @@
 /* Begin PBXFileReference section */
 		E27E199E2CB5D29700C899AE /* SillyFTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SillyFTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27E19A12CB5D29700C899AE /* SillyFTPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SillyFTPApp.swift; sourceTree = "<group>"; };
-		E27E19A32CB5D29700C899AE /* FileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileView.swift; sourceTree = "<group>"; };
 		E27E19A52CB5D29800C899AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E27E19A82CB5D29800C899AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E27E19AA2CB5D29800C899AE /* SillyFTP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SillyFTP.entitlements; sourceTree = "<group>"; };
 		E27E19AF2CB5D29900C899AE /* SillyFTPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SillyFTPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E27E19B32CB5D29900C899AE /* SillyFTPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SillyFTPTests.swift; sourceTree = "<group>"; };
 		E27E19B92CB5D29900C899AE /* SillyFTPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SillyFTPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E27E19BD2CB5D29900C899AE /* SillyFTPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SillyFTPUITests.swift; sourceTree = "<group>"; };
-		E27E19BF2CB5D29900C899AE /* SillyFTPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SillyFTPUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E27E19CC2CB5D42F00C899AE /* FileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileModel.swift; sourceTree = "<group>"; };
-		E27E19CE2CB5F2D400C899AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E27E19D12CB5F2FF00C899AE /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
-		E27E19D32CB5F32400C899AE /* ServerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfiguration.swift; sourceTree = "<group>"; };
-		E27E19D52CB5F33F00C899AE /* FileItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileItem.swift; sourceTree = "<group>"; };
 		E27E19D72CB5F35500C899AE /* ServerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRow.swift; sourceTree = "<group>"; };
 		E27E19D92CB5F36400C899AE /* FileRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileRow.swift; sourceTree = "<group>"; };
 		E27E19DB2CB5F37500C899AE /* ServerConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerConfigurationView.swift; sourceTree = "<group>"; };
 		E27E19DD2CB5F47200C899AE /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		E27E19E02CB5F5C900C899AE /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		E27E19E52CB88BE600C899AE /* ServerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				E27E19A02CB5D29700C899AE /* SillyFTP */,
-				E27E19B22CB5D29900C899AE /* SillyFTPTests */,
-				E27E19BC2CB5D29900C899AE /* SillyFTPUITests */,
 				E27E199F2CB5D29700C899AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,18 +99,14 @@
 		E27E19A02CB5D29700C899AE /* SillyFTP */ = {
 			isa = PBXGroup;
 			children = (
+				E27E19E42CB88BE100C899AE /* Utilities */,
 				E27E19DF2CB5F5BF00C899AE /* MockData */,
 				E27E19DD2CB5F47200C899AE /* MainContentView.swift */,
 				E27E19DB2CB5F37500C899AE /* ServerConfigurationView.swift */,
 				E27E19D92CB5F36400C899AE /* FileRow.swift */,
 				E27E19D72CB5F35500C899AE /* ServerRow.swift */,
-				E27E19D52CB5F33F00C899AE /* FileItem.swift */,
-				E27E19D32CB5F32400C899AE /* ServerConfiguration.swift */,
 				E27E19D12CB5F2FF00C899AE /* SidebarView.swift */,
-				E27E19CE2CB5F2D400C899AE /* ContentView.swift */,
-				E27E19CC2CB5D42F00C899AE /* FileModel.swift */,
 				E27E19A12CB5D29700C899AE /* SillyFTPApp.swift */,
-				E27E19A32CB5D29700C899AE /* FileView.swift */,
 				E27E19A52CB5D29800C899AE /* Assets.xcassets */,
 				E27E19AA2CB5D29800C899AE /* SillyFTP.entitlements */,
 				E27E19A72CB5D29800C899AE /* Preview Content */,
@@ -142,29 +122,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E27E19B22CB5D29900C899AE /* SillyFTPTests */ = {
-			isa = PBXGroup;
-			children = (
-				E27E19B32CB5D29900C899AE /* SillyFTPTests.swift */,
-			);
-			path = SillyFTPTests;
-			sourceTree = "<group>";
-		};
-		E27E19BC2CB5D29900C899AE /* SillyFTPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				E27E19BD2CB5D29900C899AE /* SillyFTPUITests.swift */,
-				E27E19BF2CB5D29900C899AE /* SillyFTPUITestsLaunchTests.swift */,
-			);
-			path = SillyFTPUITests;
-			sourceTree = "<group>";
-		};
 		E27E19DF2CB5F5BF00C899AE /* MockData */ = {
 			isa = PBXGroup;
 			children = (
 				E27E19E02CB5F5C900C899AE /* MockData.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		E27E19E42CB88BE100C899AE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E27E19E52CB88BE600C899AE /* ServerStore.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,18 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27E19A42CB5D29700C899AE /* FileView.swift in Sources */,
+				E27E19E62CB88BF400C899AE /* ServerStore.swift in Sources */,
 				E27E19E12CB5F5CB00C899AE /* MockData.swift in Sources */,
 				E27E19DE2CB5F47700C899AE /* MainContentView.swift in Sources */,
 				E27E19D82CB5F35A00C899AE /* ServerRow.swift in Sources */,
 				E27E19DC2CB5F37F00C899AE /* ServerConfigurationView.swift in Sources */,
-				E27E19CD2CB5D43600C899AE /* FileModel.swift in Sources */,
-				E27E19D62CB5F34200C899AE /* FileItem.swift in Sources */,
 				E27E19DA2CB5F36700C899AE /* FileRow.swift in Sources */,
 				E27E19D22CB5F30800C899AE /* SidebarView.swift in Sources */,
-				E27E19CF2CB5F2DB00C899AE /* ContentView.swift in Sources */,
 				E27E19A22CB5D29700C899AE /* SillyFTPApp.swift in Sources */,
-				E27E19D42CB5F32900C899AE /* ServerConfiguration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27E19B42CB5D29900C899AE /* SillyFTPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,8 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E27E19C02CB5D29900C899AE /* SillyFTPUITestsLaunchTests.swift in Sources */,
-				E27E19BE2CB5D29900C899AE /* SillyFTPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
